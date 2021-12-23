@@ -2,6 +2,7 @@
 import telegram
 import requests
 import json
+import os
 
 baseUrl = "https://api.opensea.io/api/v1/collection/"
 collections = ["cryptocoven", "infinite-grid", "tenacioustigers", "the-flower-girls", "expansionpunks"]
@@ -22,5 +23,5 @@ for collection in collections:
 
 message.rstrip()
 
-bot = telegram.Bot(token='5023930853:AAEbQA6r1P_R11N87YkPV8TzRnP0EawNG4M')
-bot.send_message(text= message, chat_id = 2063701906)
+bot = telegram.Bot(token = os.environ.get("TOKEN"))
+bot.send_message(text= message, chat_id = os.environ.get("CHAT_ID"))
