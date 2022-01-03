@@ -5,7 +5,11 @@ import json
 import os
 
 baseUrl = "https://api.opensea.io/api/v1/collection/"
-collections = ["cryptocoven", "infinite-grid", "tenacioustigers", "the-flower-girls", "expansionpunks"]
+collections = [
+     "cryptocoven", "infinite-grid", "tenacioustigers", "the-flower-girls",
+	 "expansionpunks", "partydegenerates", "mfers", "croakz-v2-1",
+	 "official-surreals"
+]
 headers = {"Accept": "application/json"}
 message = ""
 
